@@ -24,8 +24,6 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/logout', [AuthController::class, 'logout']);
         Route::resource('kota', KotaController::class);
 
-        // --- TAMBAHKAN INI ---
         Route::get('/propinsi', [App\Http\Controllers\Api\PropinsiController::class, 'index']);
     });
-    // --- SAMPAI SINI ---
 });
