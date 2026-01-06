@@ -32,7 +32,7 @@ class AuthController extends Controller
         ]);
     }
 
-    // Fitur Login (Sesuai kebutuhan PDF untuk dapat token)
+    // Fitur Login 
     public function login(Request $request)
     {
         if (!Auth::attempt($request->only('email', 'password'))) {
@@ -44,7 +44,7 @@ class AuthController extends Controller
         return response()->json([
             'message' => 'Login success',
             'data' => $user,
-            'token' => $token // Token ini yang akan dipakai Frontend [cite: 66]
+            'token' => $token
         ]);
     }
 
