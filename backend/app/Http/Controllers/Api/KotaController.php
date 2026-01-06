@@ -21,13 +21,13 @@ class KotaController extends Controller
         return response()->json(['message' => 'Berhasil', 'data' => $kota]);
     }
 
-    // GET: Ambil 1 data (untuk form edit)
+    // GET: Ambil 1 data
     public function show($id)
     {
         return response()->json(Kota::find($id));
     }
 
-    // PUT: Update data (Tugas: Ubah)
+    // PUT: Update data 
     public function update(Request $request, $id)
     {
         $kota = Kota::find($id);
@@ -35,7 +35,7 @@ class KotaController extends Controller
         return response()->json(['message' => 'Berhasil Diubah', 'data' => $kota]);
     }
 
-    // DELETE: Hapus data (Tugas: Hapus)
+    // DELETE: Hapus data 
     public function destroy($id)
     {
         Kota::destroy($id);
